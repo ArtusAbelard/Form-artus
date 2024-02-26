@@ -22,19 +22,19 @@ export default function Cardadd(props) {
                 <input ref={ref} onChange={()=>{checkedbox=="bg-[#ECECEC]"?setcheckedbox(""):setcheckedbox("bg-[#ECECEC]")}} type="checkbox"  />
                 <p className="ps-3 font-bold text-sm">Online service <br />
                 <span className="text-[#ADADAD] text-xs font-medium">Access to multiplayer games</span></p>
-                <p className="ps-[120px] font-bold text-[#61329C]">+$10/yr</p>
+                <p className="ps-[120px] font-bold text-[#61329C]">+${props.moory=="Monthly"?"1":"10"}/{props.moory=="Monthly"?"mo":"yr"}</p>
             </div>
             <div className={`w-[400px] flex justify-center items-center h-[60px] ${checkedbox1} hover:border-[#9C82BC] rounded-xl border-[2px]`} >
                 <input onChange={()=>{checkedbox1=="bg-[#ECECEC]"?setcheckedbox1(""):setcheckedbox1("bg-[#ECECEC]")}} type="checkbox" />
                 <p className="ps-3 font-bold text-sm">Larger storage <br />
                 <span className="text-[#ADADAD] text-xs font-medium">Extra 1TB of cloud save</span></p>
-                <p className="ps-[150px] font-bold text-[#61329C]">+$20/yr</p>
+                <p className="ps-[150px] font-bold text-[#61329C]">+${props.moory=="Monthly"?"2":"20"}/{props.moory=="Monthly"?"mo":"yr"}</p>
             </div>
             <div className={`w-[400px] flex justify-center items-center h-[60px] ${checkedbox2} hover:border-[#9C82BC] rounded-xl border-[2px]`} >
                 <input onChange={()=>{checkedbox2=="bg-[#ECECEC]"?setcheckedbox2(""):setcheckedbox2("bg-[#ECECEC]")}} type="checkbox" />
                 <p className="ps-3 font-bold text-sm">Customizable Profile <br />
                 <span className="text-[#ADADAD] text-xs font-medium">Custom theme on your profile</span></p>
-                <p className="ps-[110px] font-bold text-[#61329C]">+$20/yr</p>
+                <p className="ps-[110px] font-bold text-[#61329C]">+${props.moory=="Monthly"?"2":"20"}/{props.moory=="Monthly"?"mo":"yr"}</p>
             </div>
         </div>
     )

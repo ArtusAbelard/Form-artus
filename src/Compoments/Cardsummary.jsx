@@ -9,9 +9,9 @@ export default function Cardadd(props) {
             <p className="text-start w-[400px] text-[#ADADAD] text-sm">Double-check everything looks OK before confirming.</p><br /> 
             <div className="w-[400px] h-[200px] bg-[#F7F9FD] flex flex-col justify-center items-center rounded-xl gap-4">
                 <div className="w-[350px] flex items-center justify-between">
-                    <p className="text-[#17427F] font-bold">Arcade(Yearly) <br />
+                    <p className="text-[#17427F] font-bold">{props.planvalue}({props.moory}) <br />
                     <span className="text-[#ADADAD] border-b-[2px] font-medium text-xs">Change</span></p>
-                    <p className="text-[#17427F] font-bold">$90/yr</p>
+                    <p className="text-[#17427F] font-bold">${props.moory=="Monthly"&&props.planvalue=="Arcade"}/{props.moory=="Monthly"?"mo":"yr"}</p>
                 </div>
                 <div className="w-[350px] border-b-[2px]"></div>
                 <div className="w-[350px] flex justify-between items-center">

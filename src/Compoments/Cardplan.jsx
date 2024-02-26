@@ -27,12 +27,14 @@ export default function Cardplan(props) {
             setarcadetxt("90/yr")
             setadvancedtxt("120/yr")
             setprotxt("150/yr")
+            props.setmoory("Yearly")
         }else{
             setmonthly("text-[#0D203C]")
             setyear("text-[#C5C5C7]")
             setarcadetxt("9/mo")
             setadvancedtxt("12/mo")
             setprotxt("15/mo")
+            props.setmoory("Monthly")
         }
     }, [checkedbox])
     
@@ -42,17 +44,17 @@ export default function Cardplan(props) {
             <h1 className="text-start w-[400px] font-bold text-3xl">Select your plan</h1>
             <p className="text-start w-[400px] text-[#ADADAD] text-sm">You have the option of monthly or yearly billing</p><br />
             <div className="w-[400px] h-[150px] mb-4 flex items-center justify-between">
-                <div onClick={()=>{setbggrey("bg-[#ECECEC]"),setbggrey1(""),setbggrey2("")}} className={`border-[2px] hover:border-[#9C82BC] border-[#ADADAD] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey}`}>
+                <div onClick={()=>{setbggrey("bg-[#ECECEC]"),setbggrey1(""),setbggrey2(""),props.setplanvalue("Arcade")}} className={`border-[2px] hover:border-[#9C82BC] border-[#ADADAD] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey}`}>
                     <img className="ps-[10px] pt-[14px]" src={imgarcade} alt="" />
                     <h5 className="ps-[10px] pt-8 text-sm font-bold text-[#03244F]">Arcade</h5>
                     <p className="ps-[10px] text-xs font-bold text-[#ADADAD]">${arcadetxt}</p>
                 </div>
-                <div onClick={()=>{setbggrey(""),setbggrey1("bg-[#ECECEC]"),setbggrey2("")}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey1}`}>
+                <div onClick={()=>{setbggrey(""),setbggrey1("bg-[#ECECEC]"),setbggrey2(""),props.setplanvalue("Advanced")}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey1}`}>
                     <img className="ps-[10px] pt-[14px]" src={imgadvanced} alt="" />
                     <h5 className="ps-[10px] pt-8 text-sm font-bold text-[#03244F]">Advanced</h5>
                     <p className="ps-[10px] text-xs font-bold text-[#ADADAD]">${advancedtxt}</p>
                 </div>
-                <div onClick={()=>{setbggrey(""),setbggrey1(""),setbggrey2("bg-[#ECECEC]")}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey2}`}>
+                <div onClick={()=>{setbggrey(""),setbggrey1(""),setbggrey2("bg-[#ECECEC]"),props.setplanvalue("Pro")}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey2}`}>
                     <img className="ps-[10px] pt-[14px]" src={imgpro} alt="" />
                     <h5 className="ps-[10px] pt-8 text-sm font-bold text-[#03244F]">Pro</h5>
                     <p className="ps-[10px] text-xs font-bold text-[#ADADAD]">${protxt}</p>
