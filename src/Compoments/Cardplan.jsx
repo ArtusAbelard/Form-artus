@@ -1,9 +1,27 @@
 import React from "react";
+import { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 import imgarcade from "./../assets/img/icon-arcade.svg"
 import imgadvanced from "./../assets/img/icon-advanced.svg"
 import imgpro from "./../assets/img/icon-pro.svg"
 
 export default function Cardplan(props) {
+    const ref = useRef()
+    const [laref, setlaref] = useState(ref)
+    const [checkedbox, setcheckedbox] = useState("")
+    const [monthly, setmonthly] = useState("")
+    const [year, setyear] = useState("text-[#C5C5C7]")
+    useEffect(() => {
+        console.log(laref.current.checked);
+        if (laref.current.checked==true) {
+            setmonthly("text-[#0D203C]")
+            setyear("text-[#C5C5C7]")
+        }else{
+            setmonthly("text-[#C5C5C7]")
+            setyear("text-[#0D203C]")
+        }
+    }, [checkedbox])
     
 
     return (
@@ -28,9 +46,10 @@ export default function Cardplan(props) {
                 </div>
             </div>
             <div className="w-[400px] h-[50px] flex items-center justify-center bg-[#EDF3FD] gap-16">
-                <h4 className="font-bold">Monthly</h4>
-                <input type="checkbox" className="toggle theme-controller " name="" id="" />
-                <h4 className="font-bold">Yearly</h4>
+                <h4 className={`font-bold ${monthly}`}>Monthly</h4>
+                {/* #0D203C */}
+                <input ref={ref} onChange={()=>{checkedbox=="bg-[#ECECEC]"?setcheckedbox(""):setcheckedbox("bg-[#ECECEC]")}} type="checkbox" className="toggle theme-controller " name="" id="" />
+                <h4 className={`font-bold ${year}`}>Yearly</h4>
             </div>
         </div>
     )
