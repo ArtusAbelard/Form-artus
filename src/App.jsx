@@ -23,10 +23,12 @@ function App() {
   const [planvalue, setplanvalue] = useState("")
   const [moory, setmoory] = useState("Monthly")
   const [chosed, setchosed] = useState("")
+  const [checked, setchecked] = useState("")
+    const [checked1, setchecked1] = useState("")
+    const [checked2, setchecked2] = useState("")
 
   useEffect(() => {
     
-    console.log(chosed);
   }, [planvalue])
 
   return (
@@ -35,7 +37,7 @@ function App() {
        <Leftcard active={active} setactive={setactive}></Leftcard>
        <div>
         {
-          active==1?<Cardinfo></Cardinfo>:active==2?<Cardplan setchosed={setchosed} setmoory={setmoory} setplanvalue={setplanvalue}></Cardplan>:active==3?<Cardadd moory={moory}></Cardadd>:active==4?<Cardsummary chosed={chosed} moory={moory} planvalue={planvalue}></Cardsummary>:active==5?<Thankyou></Thankyou>:""
+          active==1?<Cardinfo></Cardinfo>:active==2?<Cardplan setchosed={setchosed} setmoory={setmoory} setplanvalue={setplanvalue}></Cardplan>:active==3?<Cardadd setchecked2={setchecked2} setchecked1={setchecked1} setchecked={setchecked} moory={moory}></Cardadd>:active==4?<Cardsummary checked2={checked2} checked1={checked1} checked={checked} chosed={chosed} moory={moory} planvalue={planvalue}></Cardsummary>:active==5?<Thankyou></Thankyou>:""
         }
         <div className='h-[60px] flex justify-center items-center '>
           <div className='w-1/2 h-full flex justify-center items-center'>
