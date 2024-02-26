@@ -17,7 +17,7 @@ function App() {
     }else if (active<1){
       setactive(1)
     }
-    console.log(active);
+    
 }, [active])
 
   return (

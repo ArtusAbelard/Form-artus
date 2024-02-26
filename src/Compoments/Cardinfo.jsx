@@ -6,9 +6,8 @@ export default function Cardinfo(props) {
     const [yourname, setyourname] = useState("")
     const [yourmail, setyourmail] = useState("")
     const [yournumber, setyournumber] = useState("")
-    
-    
 
+    
     return (
         <div className='w-[500px] h-[400px] rounded-xl flex flex-col justify-center items-center pe-5'>
             <h1 className="text-start w-[400px] font-bold text-3xl">Personal info</h1>
