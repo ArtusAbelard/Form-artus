@@ -7,6 +7,7 @@ export default function Cardinfo(props) {
     const [yourmail, setyourmail] = useState("")
     const [yournumber, setyournumber] = useState("")
     
+    
 
     return (
         <div className='w-[500px] h-[400px] rounded-xl flex flex-col justify-center items-center pe-5'>
