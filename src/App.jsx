@@ -6,7 +6,7 @@ import Cardplan from './Compoments/Cardplan'
 import Cardsummary from './Compoments/Cardsummary'
 
 import './App.css'
-import Cardadd from './Compoments/Cardsummary'
+import Cardadd from './Compoments/Cardadd'
 
 function App() {
   const [active, setactive] = useState(1)
@@ -27,10 +27,6 @@ function App() {
         {
           active==1?<Cardinfo></Cardinfo>:active==2?<Cardplan></Cardplan>:active==3?<Cardadd></Cardadd>:active==4?<Cardsummary></Cardsummary>:""
         }
-
-
-        {/* <Cardinfo></Cardinfo> */}
-        {/* <Cardplan></Cardplan> */}
         <div className='h-[60px] flex justify-center items-center '>
           <div className='w-1/2 h-full flex justify-center items-center'>
           {
@@ -39,7 +35,7 @@ function App() {
           </div>
           <div className='w-1/2 h-full flex justify-center items-center'>
           {
-            active==4?<button onClick={()=>{""}} className='ms-8 ms-[280px] w-[100px] h-[40px] text-sm rounded-xl bg-[#3D36FE] flex justify-center items-center text-white'>Confirm</button>:<button onClick={()=>{setactive(active+1)}} className='hover:bg-[#00367E] ms-8 w-[100px] h-[40px] text-sm rounded-xl bg-[#03244F] flex justify-center items-center text-white'>Next Step</button>
+            active==4?<button onClick={()=>{""}} className=' ms-8 w-[100px] h-[40px] text-sm rounded-xl bg-[#3D36FE] flex justify-center items-center text-white'>Confirm</button>:<button onClick={()=>{setactive(active+1)}} className='hover:bg-[#00367E] ms-8 w-[100px] h-[40px] text-sm rounded-xl bg-[#03244F] flex justify-center items-center text-white'>Next Step</button>
           }
           </div>
 
