@@ -22,10 +22,11 @@ function App() {
 
   const [planvalue, setplanvalue] = useState("")
   const [moory, setmoory] = useState("Monthly")
+  const [chosed, setchosed] = useState("")
 
   useEffect(() => {
-    console.log(planvalue);
-    console.log(moory);
+    
+    console.log(chosed);
   }, [planvalue])
 
   return (
@@ -34,7 +35,7 @@ function App() {
        <Leftcard active={active} setactive={setactive}></Leftcard>
        <div>
         {
-          active==1?<Cardinfo></Cardinfo>:active==2?<Cardplan setmoory={setmoory} setplanvalue={setplanvalue}></Cardplan>:active==3?<Cardadd moory={moory}></Cardadd>:active==4?<Cardsummary moory={moory} planvalue={planvalue}></Cardsummary>:active==5?<Thankyou></Thankyou>:""
+          active==1?<Cardinfo></Cardinfo>:active==2?<Cardplan setchosed={setchosed} setmoory={setmoory} setplanvalue={setplanvalue}></Cardplan>:active==3?<Cardadd moory={moory}></Cardadd>:active==4?<Cardsummary chosed={chosed} moory={moory} planvalue={planvalue}></Cardsummary>:active==5?<Thankyou></Thankyou>:""
         }
         <div className='h-[60px] flex justify-center items-center '>
           <div className='w-1/2 h-full flex justify-center items-center'>
