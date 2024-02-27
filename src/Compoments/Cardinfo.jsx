@@ -6,6 +6,13 @@ export default function Cardinfo(props) {
     const [yourname, setyourname] = useState("")
     const [yourmail, setyourmail] = useState("")
     const [yournumber, setyournumber] = useState("")
+    useEffect(() => {
+        if (yourname.length&&yourmail.length&&yournumber.length>=1) {
+            props.setinfook(true)
+            
+        }
+        
+    }, [yourname,yourmail,yournumber])
 
     
     return (
