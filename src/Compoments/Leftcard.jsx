@@ -1,12 +1,13 @@
 import React from "react";
 import bgleft from "./../assets/img/bg-sidebar-desktop.svg"
+import './Leftcard.css'
 
 
 export default function Leftcard(props) {
     
-
+    // style={{backgroundImage: `url(${bgleft})`}}
     return (
-        <div className={`w-[250px] h-[465px] rounded-xl gap-6 bg-blue-800 ewa bg-cover flex flex-col justify-start pt-10 items-center`} style={{backgroundImage: `url(${bgleft})`}} >
+        <div className={`w-[250px] h-[465px] rounded-xl gap-6 bg-blue-800 ewa bg-cover flex flex-col justify-start pt-10 items-center`} id="ewa"  >
             <div className="flex justify-center items-center gap-4 pe-9">
                 <div onClick={()=>{props.setactive(1)}} className={`${props.active==1?'bg-white':'text-white'} h-[35px] w-[35px] border-white rounded-full flex items-center justify-center font-bold border-[2px]`}>1</div>
                 <p className="text-sm text-white w-[90px]">step 1 <br /> <span className="font-bold">YOUR INFO</span></p>

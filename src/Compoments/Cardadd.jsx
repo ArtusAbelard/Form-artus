@@ -10,8 +10,7 @@ export default function Cardadd(props) {
     const [checkedbox1, setcheckedbox1] = useState("")
     const [checkedbox2, setcheckedbox2] = useState("")
     useEffect(() => {
-        console.log(laref.current.checked);
-        console.log(laref);
+        
     }, [checkedbox])
     
     

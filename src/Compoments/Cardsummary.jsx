@@ -27,7 +27,6 @@ export default function Cardadd(props) {
       }
     }, [thetotal,props.checked,props.checked1,props.checked2])
     
-
     return (
         <div className='w-[500px] h-[400px] rounded-xl flex flex-col justify-center items-center pe-5'>
             <h1 className="text-start w-[400px] font-bold text-3xl">Finishing up </h1>
@@ -56,7 +55,6 @@ export default function Cardadd(props) {
                 <p className="text-[#ADADAD] text-sm">Total ({props.moory=="Monthly"?"per month":"per year"})</p>
                 <p className="font-bold text-[#3D36FE]">${thetotal}/{props.moory=="Monthly"?"mo":"yr"}</p>
             </div>
-            {/* props.moory=="Monthly"?props.total:props.total*10 */}
         </div>
     )
 }
