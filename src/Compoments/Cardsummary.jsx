@@ -34,7 +34,7 @@ export default function Cardadd(props) {
             <div className="max-[375px]:w-[250px] w-[400px] h-[200px] bg-[#F7F9FD] flex flex-col justify-center items-center rounded-xl gap-4">
                 <div className={`max-[375px]:w-[200px] w-[350px] flex items-center justify-between`}>
                     <p className="text-[#17427F] font-bold">{props.planvalue}({props.moory}) <br />
-                    <span onClick={()=>{props.setactive(2)}} className="text-[#ADADAD] border-b-[2px] font-medium text-xs">Change</span></p>
+                    <span onClick={()=>{props.setactive(2)}} className="text-[#ADADAD] border-b-[2px] font-medium text-xs cursor-pointer">Change</span></p>
                     <p className="text-[#17427F] font-bold">${props.moory=="Monthly"&&props.chosed=="Arcade"?"9":props.moory=="Monthly"&&props.chosed=="Advanced"?"12":props.moory=="Monthly"&&props.chosed=="Pro"?"15":props.moory=="Yearly"&&props.chosed=="Arcade"?"90":props.moory=="Yearly"&&props.chosed=="Advanced"?"120":props.moory=="Yearly"&&props.chosed=="Pro"?"150":""}/{props.moory=="Monthly"?"mo":"yr"}</p>
                 </div>
                 <div className="max-[375px]:w-[200px] w-[350px] border-b-[2px]"></div>

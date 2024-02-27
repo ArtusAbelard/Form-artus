@@ -37,8 +37,6 @@ export default function Cardplan(props) {
             props.setmoory("Monthly")
         }
     }, [checkedbox])
-    
-
     return (
         <div className='max-[375px]:ms-[50px] max-[375px]:w-[200px] w-[500px] h-[400px] rounded-xl flex flex-col justify-center items-center pe-5 max-[375px]:pe-0'>
             <h1 className="text-start max-[375px]:w-[200px] w-[400px] font-bold text-3xl">Select your plan</h1>

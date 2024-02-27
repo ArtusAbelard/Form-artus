@@ -21,7 +21,8 @@ export default function Cardinfo(props) {
             <p className="mt-3 text-start w-[400px] text-xs font-bold max-[375px]:w-[200px]">Your mail is : {yourmail}</p>
             <input onChange={(e)=>{setyourmail(e.target.value)}} className="max-[375px]:w-[200px] mt-3 ps-3 w-[400px] border-[2px] h-[40px] rounded-xl text-sm" placeholder="Your Mail" name="email" type="email" />
             <p className="mt-3 text-start w-[400px] text-xs font-bold max-[375px]:w-[200px]">Your phone number is : {yournumber}</p>
-            <input onChange={(e)=>{setyournumber(e.target.value)}} className="max-[375px]:w-[200px] mt-3 ps-3 w-[400px] border-[2px] h-[40px] rounded-xl text-sm" placeholder="Your Phone" type="text" />
+            <input onChange={(e)=>{setyournumber(e.target.value)}} className="appearance-none max-[375px]:w-[200px] mt-3 ps-3 w-[400px] border-[2px] h-[40px] rounded-xl text-sm" placeholder="Your Phone" type="tel"  />
         </div>
+        
     )
 }
