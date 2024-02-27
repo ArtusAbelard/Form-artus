@@ -12,7 +12,7 @@ export default function Cardplan(props) {
     const [checkedbox, setcheckedbox] = useState("")
     const [monthly, setmonthly] = useState("")
     const [year, setyear] = useState("text-[#C5C5C7]")
-    const [bggrey, setbggrey] = useState("")
+    const [bggrey, setbggrey] = useState("bg-[#ECECEC]")
     const [bggrey1, setbggrey1] = useState("")
     const [bggrey2, setbggrey2] = useState("")
     const [arcadetxt, setarcadetxt] = useState("9/mo")
@@ -44,17 +44,17 @@ export default function Cardplan(props) {
             <h1 className="text-start w-[400px] font-bold text-3xl">Select your plan</h1>
             <p className="text-start w-[400px] text-[#ADADAD] text-sm">You have the option of monthly or yearly billing</p><br />
             <div className="w-[400px] h-[150px] mb-4 flex items-center justify-between">
-                <div onClick={()=>{setbggrey("bg-[#ECECEC]"),setbggrey1(""),setbggrey2(""),props.setplanvalue("Arcade"),props.setchosed("Arcade")}} className={`border-[2px] hover:border-[#9C82BC] border-[#ADADAD] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey}`}>
+                <div onClick={()=>{setbggrey("bg-[#ECECEC]"),setbggrey1(""),setbggrey2(""),props.setplanvalue("Arcade"),props.setchosed("Arcade"),props.settotal(9)}} className={`border-[2px] hover:border-[#9C82BC] border-[#ADADAD] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey}`}>
                     <img className="ps-[10px] pt-[14px]" src={imgarcade} alt="" />
                     <h5 className="ps-[10px] pt-8 text-sm font-bold text-[#03244F]">Arcade</h5>
                     <p className="ps-[10px] text-xs font-bold text-[#ADADAD]">${arcadetxt}</p>
                 </div>
-                <div onClick={()=>{setbggrey(""),setbggrey1("bg-[#ECECEC]"),setbggrey2(""),props.setplanvalue("Advanced"),props.setchosed("Advanced")}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey1}`}>
+                <div onClick={()=>{setbggrey(""),setbggrey1("bg-[#ECECEC]"),setbggrey2(""),props.setplanvalue("Advanced"),props.setchosed("Advanced"),props.settotal(12)}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey1}`}>
                     <img className="ps-[10px] pt-[14px]" src={imgadvanced} alt="" />
                     <h5 className="ps-[10px] pt-8 text-sm font-bold text-[#03244F]">Advanced</h5>
                     <p className="ps-[10px] text-xs font-bold text-[#ADADAD]">${advancedtxt}</p>
                 </div>
-                <div onClick={()=>{setbggrey(""),setbggrey1(""),setbggrey2("bg-[#ECECEC]"),props.setplanvalue("Pro"),props.setchosed("Pro")}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey2}`}>
+                <div onClick={()=>{setbggrey(""),setbggrey1(""),setbggrey2("bg-[#ECECEC]"),props.setplanvalue("Pro"),props.setchosed("Pro"),props.settotal(15)}} className={`border-[2px] border-[#ADADAD] hover:border-[#9C82BC] active:bg-[#ECECEC] w-[125px] rounded-xl h-[140px] ${bggrey2}`}>
                     <img className="ps-[10px] pt-[14px]" src={imgpro} alt="" />
                     <h5 className="ps-[10px] pt-8 text-sm font-bold text-[#03244F]">Pro</h5>
                     <p className="ps-[10px] text-xs font-bold text-[#ADADAD]">${protxt}</p>

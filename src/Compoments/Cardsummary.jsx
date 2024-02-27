@@ -1,6 +1,31 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Cardadd(props) {
+    const [thetotal, setthetotal] = useState()
+    useEffect(() => {
+      if (props.moory=="Monthly") {
+        setthetotal(props.total)
+      }else{
+        setthetotal(props.total*10)
+      } 
+      if (props.checked==true && props.moory=="Monthly") {
+        setthetotal(thetotal=>thetotal+1)
+      } else if (props.checked==true && props.moory=="Yearly"){
+        setthetotal(thetotal=>thetotal+10)
+      }
+      if (props.checked1==true && props.moory=="Monthly") {
+        setthetotal(thetotal=>thetotal+2)
+      } else if (props.checked1==true && props.moory=="Yearly"){
+        setthetotal(thetotal=>thetotal+20)
+      }
+      if (props.checked2==true && props.moory=="Monthly") {
+        setthetotal(thetotal=>thetotal+2)
+      } else if (props.checked2==true && props.moory=="Yearly"){
+        setthetotal(thetotal=>thetotal+20)
+      }
+    }, [thetotal,props.checked,props.checked1,props.checked2])
     
 
     return (
@@ -10,7 +35,7 @@ export default function Cardadd(props) {
             <div className="w-[400px] h-[200px] bg-[#F7F9FD] flex flex-col justify-center items-center rounded-xl gap-4">
                 <div className={`w-[350px] flex items-center justify-between`}>
                     <p className="text-[#17427F] font-bold">{props.planvalue}({props.moory}) <br />
-                    <span className="text-[#ADADAD] border-b-[2px] font-medium text-xs">Change</span></p>
+                    <span onClick={()=>{props.setactive(2)}} className="text-[#ADADAD] border-b-[2px] font-medium text-xs">Change</span></p>
                     <p className="text-[#17427F] font-bold">${props.moory=="Monthly"&&props.chosed=="Arcade"?"9":props.moory=="Monthly"&&props.chosed=="Advanced"?"12":props.moory=="Monthly"&&props.chosed=="Pro"?"15":props.moory=="Yearly"&&props.chosed=="Arcade"?"90":props.moory=="Yearly"&&props.chosed=="Advanced"?"120":props.moory=="Yearly"&&props.chosed=="Pro"?"150":""}/{props.moory=="Monthly"?"mo":"yr"}</p>
                 </div>
                 <div className="w-[350px] border-b-[2px]"></div>
@@ -29,8 +54,9 @@ export default function Cardadd(props) {
             </div>
             <div className="w-[400px] h-[50px] flex justify-center items-center gap-[200px]">
                 <p className="text-[#ADADAD] text-sm">Total ({props.moory=="Monthly"?"per month":"per year"})</p>
-                <p className="font-bold text-[#3D36FE]">$0/{props.moory=="Monthly"?"mo":"yr"}</p>
+                <p className="font-bold text-[#3D36FE]">${thetotal}/{props.moory=="Monthly"?"mo":"yr"}</p>
             </div>
+            {/* props.moory=="Monthly"?props.total:props.total*10 */}
         </div>
     )
 }
