@@ -62,7 +62,7 @@ export default function Cardplan(props) {
             </div>
             <div className="max-[375px]:w-[290px] w-[400px] h-[50px] flex items-center justify-center bg-[#EDF3FD] gap-16">
                 <h4 className={`font-bold ${monthly}`}>Monthly</h4>
-                <input ref={ref} onChange={()=>{checkedbox=="bg-[#ECECEC]"?setcheckedbox(""):setcheckedbox("bg-[#ECECEC]")}} type="checkbox" className="toggle theme-controller " name="" id="" />
+                <input ref={ref} onChange={()=>{checkedbox=="bg-[#ECECEC]"?setcheckedbox(""):setcheckedbox("bg-[#ECECEC]")}} type="checkbox" className="toggle [--tglbg:rgb(2,41,90)] bg-white hover:bg-white border-white theme-controller " name="" id="" />
                 <h4 className={`font-bold ${year}`}>Yearly</h4>
             </div>
         </div>

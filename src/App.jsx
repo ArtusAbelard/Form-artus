@@ -28,11 +28,9 @@ function App() {
   const [checked2, setchecked2] = useState("")
   const [total, settotal] = useState(9)
   const [infook, setinfook] = useState(false)
-
   useEffect(() => {
     
   }, [planvalue])
-
   return (
     <div className='bg-[#ECF3FD] w-screen h-screen max-[375px]:h-[1300px] flex justify-center items-center '>
       <div className=' bg-white rounded-2xl w-[820px] h-[500px] max-[375px]:h-[1200px] max-[375px]:w-[300px] flex max-[375px]:flex-col justify-center gap-[50px] items-center'>
