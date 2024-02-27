@@ -34,8 +34,8 @@ function App() {
   }, [planvalue])
 
   return (
-    <div className='bg-[#ECF3FD] w-screen h-screen flex justify-center items-center '>
-      <div className='bg-white rounded-2xl w-[820px] h-[500px] flex justify-center gap-[50px] items-center'>
+    <div className='bg-[#ECF3FD] w-screen h-screen max-[375px]:h-[1300px] flex justify-center items-center '>
+      <div className=' bg-white rounded-2xl w-[820px] h-[500px] max-[375px]:h-[1200px] max-[375px]:w-[300px] flex max-[375px]:flex-col justify-center gap-[50px] items-center'>
        <Leftcard active={active} setactive={setactive}></Leftcard>
        <div>
         {
